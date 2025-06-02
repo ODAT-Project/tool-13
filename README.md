@@ -10,4 +10,4 @@ This GUI-based application uses Random Survival Forest (RSF) model to generate n
 
 ## Screenshot
 
-![Application Screenshot](screen.png)
+![Application Screenshot](screenshot.png)
