@@ -1,0 +1,25 @@
+
+--- Combined Model Training Report ---
+Dataset Shape (after initial cleaning): (2005, 27)
+Target Event Column: Cardiovascular_mortality, Time Column: Time_to_CVD_mortality_days
+
+Risk Score Model (Random Survival Forest):
+  Features used: 1
+  Hyperparameters: Estimators=100, MaxDepth=10
+
+CPH Model:
+  Features used (incl. RSF score): 3
+  Linear CPH Features: ['Statins_and_fibrates', 'Systolic_blood_pressure_mmHg']
+  CPH L2 Penalizer: 0.1
+
+CPH Model Summary (Hazard Ratios):
+                   covariate  exp(coef)  exp(coef) lower 95%  exp(coef) upper 95%            p
+        Statins_and_fibrates   1.182214             0.996842             1.402057 5.440337e-02
+Systolic_blood_pressure_mmHg   1.112651             1.031528             1.200153 5.716391e-03
+    RSF_Risk_Score_Covariate   1.004582             1.003035             1.006131 6.135342e-09
+
+CPH Performance on Test Set:
+  Concordance Index (C-index): 0.6345
+--- End of Report ---
+-----------------------
+--- by ODAT project ---
